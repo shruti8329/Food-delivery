@@ -1,8 +1,24 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./LoginPopup.css";
 import { assets } from "../../assets/assets";
 const LoginPopup = ({ setShowLogin }) => {
   const [currentState, setcurrentState] = useState("Sign Up");
+  const [data, setData] = useState({
+    name: "",
+    email: "",
+    password: "",
+  });
+
+  const onChangeHandler = (event) => {
+    const name = event.target.name;
+    const value = event.target.value;
+    setData((data) => ({ ...data, [name]: value }));
+  };
+
+  useEffect(() => {
+    console.log(data);
+  }, [data]);
+
   return (
     <div className="login-popup">
       <form
@@ -22,11 +38,32 @@ const LoginPopup = ({ setShowLogin }) => {
           {currentState === "Login" ? (
             <></>
           ) : (
-            <input type="text" placeholder="Your Name" required />
+            <input
+              name="name"
+              onChange={onChangeHandler}
+              value={data.name}
+              type="text"
+              placeholder="Your Name"
+              required
+            />
           )}
-          <input type="email" placeholder="Your email" required />
+          <input
+            name="email"
+            onChange={onChangeHandler}
+            value={data.email}
+            type="email"
+            placeholder="Your email"
+            required
+          />
           {/* <br /> */}
-          <input type="password" placeholder="Password" required />
+          <input
+            name="password"
+            onChange={onChangeHandler}
+            value={data.password}
+            type="password"
+            placeholder="Password"
+            required
+          />
         </div>
         <button>
           {currentState === "sign Up" ? "Create Account" : "Login"}

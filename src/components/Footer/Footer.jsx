@@ -8,13 +8,13 @@ const footer = () => {
         <div className="footer-content-left">
           <img src={assets.logo} alt="" />
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
-            unde, numquam laudantium, corrupti doloremque reprehenderit soluta
-            voluptate deserunt, dolores tenetur fuga voluptas repudiandae
-            accusantium. Facilis amet, ipsam id quo excepturi perferendis dicta,
-            alias labore optio, sed harum at? Quaerat quo consequatur ex. Dicta
-            natus velit iste sed quaerat? Nulla recusandae harum accusantium
-            voluptatem delectus sint.
+            Get ready for a flavor explosion with our sizzling food delivery
+            website! Indulge in mouthwatering dishes that pack a punch of spice
+            and a touch of sweetness, all delivered straight to your door. From
+            fiery favorites to tantalizing treats, every bite is a symphony of
+            taste sensations that will leave you craving for more. Order now and
+            elevate your dining experience to a whole new level of
+            deliciousness!
           </p>
           <div className="footer-social-icons">
             <img src={assets.facebook_icon} alt="" />
@@ -34,7 +34,7 @@ const footer = () => {
         <div className="footer-content-right">
           <h2>GET IN TOUCH</h2>
           <ul>
-            <li>+1 36-256-2586</li>
+            <li>+91 9850779222</li>
             <li>contact@tomato.com</li>
           </ul>
         </div>
