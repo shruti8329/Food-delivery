@@ -1,6 +1,6 @@
 import basket_icon from "./basket_icon.png";
-import logo from "./logo.png";
 import tomato from "./tomato.avif";
+import logo from "./logo.png";
 import tomatologo from "./tomatologo.jpg";
 import header_img from "./header_img.png";
 import search_icon from "./search_icon.png";

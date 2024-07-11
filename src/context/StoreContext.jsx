@@ -14,8 +14,16 @@ const StoreContextProvider = (props) => {
     }
   };
 
-  const removeFromCart = (itemId) => {
-    setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }));
+  const removeFromCart = (itemId, removeAll = false) => {
+    setCartItems((prev) => {
+      const updatedCartItems = { ...prev };
+      if (removeAll || updatedCartItems[itemId] <= 1) {
+        delete updatedCartItems[itemId];
+      } else {
+        updatedCartItems[itemId] -= 1;
+      }
+      return updatedCartItems;
+    });
   };
 
   const getTotalCartAmount = () => {
