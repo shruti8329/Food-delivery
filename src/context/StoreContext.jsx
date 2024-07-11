@@ -1,19 +1,10 @@
 import { createContext } from "react";
 import { food_list } from "../assets/assets";
-
 import { useState } from "react";
 export const StoreContext = createContext(null);
 
 const StoreContextProvider = (props) => {
   const [cartItems, setCartItems] = useState({});
-
-  const setIncrement = () => {
-    amount < 1 ? setAmount(amount + 1) : setAmount(amount + 1);
-  };
-  const setDecrement = () => {
-    amount > cartItems ? setAmount(amount - 1) : setAmount(1);
-  };
-  const { amount, setAmount } = useState(1);
 
   const addToCart = (itemId) => {
     if (!cartItems[itemId]) {
@@ -21,14 +12,6 @@ const StoreContextProvider = (props) => {
     } else {
       setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
     }
-    {
-      /* Add to cart increment and decrement */
-    }
-    <cartAmountToggle
-      amount={amount}
-      setDecrement={setDecrement}
-      setIncrement={setIncrement}
-    ></cartAmountToggle>;
   };
 
   const removeFromCart = (itemId) => {

@@ -60,3 +60,13 @@
   border-radius: 4px;
   cursor: pointer;
 }
+.quantity-control {
+  display: flex;
+  align-items: center;
+}
+
+.quantity-control button {
+  padding: 5px 10px;
+  margin: 0 5px;
+  cursor: pointer;
+}
